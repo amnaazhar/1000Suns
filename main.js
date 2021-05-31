@@ -256,7 +256,7 @@ function main() {
     }
     particleGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
      
-     const cross = new THREE.TextureLoader().load("/assets/glow2.png");
+     const cross = new THREE.TextureLoader().load("/1000Suns/assets/glow2.png");
     const particlematerial = new THREE.PointsMaterial({
         size: 0.085,
         map:cross,
