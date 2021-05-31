@@ -85,8 +85,6 @@ var textWrapper = document.querySelector('.ml12quote');
 
 
 function text(){
-  orb = true;
-
   var tl = gsap.timeline();
  // tl.set('.ml12quote', { opacity: 0, scale: 1.1});
   //console.log(quote[quote_index]);
@@ -154,7 +152,7 @@ function main() {
     let mixer_birds
     var birds = new THREE.Object3D();;
     let loader_birds = new GLTFLoader();
-    loader_birds.load('/assets/birds/scene.gltf', function(gltf){
+    loader_birds.load('/1000Suns/assets/birds/scene.gltf', function(gltf){
       gltf.scene.position.set(-120,50, 10);
       gltf.scene.scale.set(2,2,2);
       gltf.scene.rotation.set(0, 1.57079633,-3.141592);
