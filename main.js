@@ -41,7 +41,7 @@ const camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.inne
 
 const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+document.getElementsByClassName("canvas-placement")[0].appendChild( renderer.domElement );
 
 //const controls = new OrbitControls(camera);
 //controls.rotateSpeed *= -1;
@@ -329,7 +329,7 @@ function main() {
 
 
 
-    function resizeRendererToDisplaySize(renderer) {
+  function resizeRendererToDisplaySize(renderer) {
       const canvas = renderer.domElement;
       const width = canvas.clientWidth;
       const height = canvas.clientHeight;
@@ -444,7 +444,7 @@ function main() {
   gsap.to(bloomPass, {duration:6, threshold :0.55, ease: "sine"});
   gsap.to(bloomPass, {duration:6, strength :0.5, ease: "sine"});
   gsap.to(bloomPass, {duration:1, radius :1, ease: "sine", onComplete: revealtitle});
-  onWindowResize();
+  
 
    render();
 
