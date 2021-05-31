@@ -18,9 +18,10 @@ import { UnrealBloomPass} from 'https://cdn.skypack.dev/three@0.128.0/examples/j
 import {FilmPass} from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/postprocessing/FilmPass.js';
 
 const quote = [
-  '"Marriage can wait,\nEducation cannot."',
-  '"One could not count the moons that shimmer on her roofs,\nOr the thousand splendid suns that hide behind her walls."',
+
   '"Of all the hardships a person had to face,\nNone was more punishing than the simple act of waiting."',
+  '"One could not count the moons that shimmer on her roofs,\nOr the thousand splendid suns that hide behind her walls."',
+  '"Marriage can wait,\nEducation cannot."',
   '"Behind every trial and sorrow that He makes us shoulder,\nGod has a reason."',
   '"Like a compass facing north, a man’s accusing finger always finds a woman."',
   '"You see, some things I can teach you. Some you learn from books. But there are things that, well, you have to see and feel."',
@@ -91,23 +92,7 @@ function text(){
   textWrapper.innerHTML = quote[quote_index];
   tl.to('.ml12quote', { opacity: 1, ease: "sine", duration: 2, scale: 0.9});
   tl.to('.ml12quote', {opacity: 0, ease: "linear.out", duration: 4, scale: 1.1, delay: 2, onComplete:updateTXT});
-//   anime.timeline({loop: true})//
-//   .add({
-//       targets: '.ml12 .letter',
-//       translateX: [40,0],
-//       translateZ: 0,
-//       opacity: [0,1],
-//       easing: "easeOutExpo",
-//       duration: 1500,
-//       delay: (el, i) => 500 + 60 * i
-//   }).add({
-//       targets: '.ml12 .letter',
-//       translateX: [0,-30],
-//       opacity: [1,0],
-//       easing: "easeInExpo",
-//       duration: 1100,
-//       delay: (el, i) => 100 + 30 * i
-//   });
+
 
 }
 
