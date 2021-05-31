@@ -222,7 +222,7 @@ function main() {
    
    const loader_text = new THREE.FontLoader();
 
-   loader_text.load( '/1000Suns/node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function ( font ) {
+   loader_text.load( '/1000Suns/extra_modules/three/examples/fonts/helvetiker_regular.typeface.json', function ( font ) {
    
      const geometry = new THREE.TextGeometry( 'Amna Azhar', {
        font: font,
