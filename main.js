@@ -153,7 +153,7 @@ function main() {
     let mixer_birds
     var birds = new THREE.Object3D();;
     let loader_birds = new GLTFLoader();
-    loader_birds.load('./assets/birds/scene.gltf', function(gltf){
+    loader_birds.load('/1000Suns/assets/birds/scene.gltf', function(gltf){
       gltf.scene.position.set(-120,50, 10);
       gltf.scene.scale.set(2,2,2);
       gltf.scene.rotation.set(0, 1.57079633,-3.141592);
@@ -189,7 +189,7 @@ function main() {
 
    // loading 3D object
    let loader_terrain = new FBXLoader();
-       loader_terrain.load('/assets/desert/desert_Pillar_terrain.fbx', function(obj){
+       loader_terrain.load('/1000Suns/assets/desert/desert_Pillar_terrain.fbx', function(obj){
 
        obj.position.set(-10,-4,-25);
        obj.scale.set(0.05,0.05,0.05);
@@ -203,7 +203,7 @@ function main() {
       // loading 3D object
     let mixer;
     let loader_trees = new GLTFLoader();
-        loader_trees.load('/assets/pinktree/source/pinktree.glb', function(obj){
+        loader_trees.load('/1000Suns/assets/pinktree/source/pinktree.glb', function(obj){
 
         const clips = obj.animations;
         mixer = new THREE.AnimationMixer( obj.scene);
@@ -223,7 +223,7 @@ function main() {
    
    const loader_text = new THREE.FontLoader();
 
-   loader_text.load( '/node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function ( font ) {
+   loader_text.load( '/1000Suns/node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function ( font ) {
    
      const geometry = new THREE.TextGeometry( 'Amna Azhar', {
        font: font,
