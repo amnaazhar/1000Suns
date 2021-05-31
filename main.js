@@ -91,7 +91,7 @@ function text(){
   //console.log(quote[quote_index]);
   textWrapper.innerHTML = quote[quote_index];
   tl.to('.ml12quote', { opacity: 1, ease: "sine", duration: 2, scale: 0.9});
-  tl.to('.ml12quote', {opacity: 0, ease: "linear.out", duration: 4, scale: 1.1, delay: 2, onComplete:updateTXT});
+  tl.to('.ml12quote', {opacity: 0, ease: "linear.out", duration: 4, scale: 1.1, delay: 4, onComplete:updateTXT});
 
 
 }
