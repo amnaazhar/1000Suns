@@ -189,7 +189,7 @@ function main() {
 
    // loading 3D object
    let loader_terrain = new FBXLoader();
-       loader_terrain.load('./assets/desert/desert_Pillar_terrain.fbx', function(obj){
+       loader_terrain.load('/assets/desert/desert_Pillar_terrain.fbx', function(obj){
 
        obj.position.set(-10,-4,-25);
        obj.scale.set(0.05,0.05,0.05);
@@ -203,7 +203,7 @@ function main() {
       // loading 3D object
     let mixer;
     let loader_trees = new GLTFLoader();
-        loader_trees.load('./assets/pinktree/source/pinktree.glb', function(obj){
+        loader_trees.load('/assets/pinktree/source/pinktree.glb', function(obj){
 
         const clips = obj.animations;
         mixer = new THREE.AnimationMixer( obj.scene);
@@ -223,7 +223,7 @@ function main() {
    
    const loader_text = new THREE.FontLoader();
 
-   loader_text.load( '../node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function ( font ) {
+   loader_text.load( '/node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function ( font ) {
    
      const geometry = new THREE.TextGeometry( 'Amna Azhar', {
        font: font,
@@ -257,7 +257,7 @@ function main() {
     }
     particleGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
      
-     const cross = new THREE.TextureLoader().load("../assets/glow2.png");
+     const cross = new THREE.TextureLoader().load("/assets/glow2.png");
     const particlematerial = new THREE.PointsMaterial({
         size: 0.085,
         map:cross,
