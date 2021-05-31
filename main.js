@@ -8,7 +8,7 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.128.0';
 import { OBJLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/OBJLoader.js';
 import { EXRLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/EXRLoader.js';
-import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js'
+//import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js'
 import {FBXLoader} from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/FBXLoader.js'
 import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js'
 import { TWEEN } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/libs/tween.module.min.js'
@@ -43,9 +43,10 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(0, 0, 0);
-controls.update();
+//const controls = new OrbitControls(camera);
+//controls.rotateSpeed *= -1;
+//controls.target.set(0, 0, 0);
+//controls.update();
 
 const scene = new THREE.Scene();
 camera.position.z = 3;
@@ -84,7 +85,7 @@ var textWrapper = document.querySelector('.ml12quote');
 
 
 function text(){
-
+  orb = true;
 
   var tl = gsap.timeline();
  // tl.set('.ml12quote', { opacity: 0, scale: 1.1});
@@ -142,7 +143,7 @@ function main() {
   {
     const loader = new THREE.TextureLoader();
     const texture = loader.load(
-      '/1000Suns/assets/sky2.jpeg',
+      '/assets/sky2.jpeg',
       () => {
         const rt = new THREE.WebGLCubeRenderTarget(texture.image.height);
         rt.fromEquirectangularTexture(renderer, texture);
@@ -418,8 +419,11 @@ function main() {
     //renderer.render(scene, camera);
     composer.render();
     
+    
     requestAnimationFrame(render);
     //console.log(camera.position, camera.rotation);
+  
+        
   }
 
 
